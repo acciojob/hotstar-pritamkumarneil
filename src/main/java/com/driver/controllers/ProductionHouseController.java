@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/production")
+@RequestMapping("production")
 public class ProductionHouseController {
     @Autowired
     ProductionHouseService productionHouseService;

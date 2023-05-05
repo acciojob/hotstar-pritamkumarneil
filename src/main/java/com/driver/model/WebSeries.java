@@ -1,17 +1,10 @@
 package com.driver.model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "webSeries")
 public class WebSeries {
 
     @Id
@@ -24,7 +17,7 @@ public class WebSeries {
     private int ageLimit;
 
     private double rating;
-
+    @Enumerated(EnumType.STRING)
     private SubscriptionType subscriptionType; //This denotes with which of subscriptionType this webseries comes ie. BASIC,PRO, ELITE
 
     @ManyToOne
